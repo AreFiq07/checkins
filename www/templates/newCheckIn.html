@@ -1,0 +1,34 @@
+<ion-view title="New Check In" id="page2">
+    <ion-content padding="true" class="has-header">
+        <form id="newCheckIn-form1" class="list">
+            <label class="item item-input" id="newCheckIn-input1" name="name">
+                <span class="input-label">Name</span>
+                <input type="text" placeholder="" ng-model="$parent.name">
+            </label>
+            <label class="item item-input" id="newCheckIn-textarea1" name="description">
+                <span class="input-label">Description</span>
+                <textarea placeholder="" ng-model="$parent.description"></textarea>
+            </label>
+            <label class="item item-input" id="newCheckIn-textarea2" name="review">
+                <span class="input-label">Review</span>
+                <textarea placeholder="" ng-model="$parent.review"></textarea>
+            </label>
+            <ion-item class="range range-positive" id="newCheckIn-range1">Rating
+                <input type="range" value="50" min="1" max="5" step="1" ng-model="$parent.rating">
+            </ion-item>
+            <button ng-click="getPosition()" id="newCheckIn-button2" class="button button-positive  button-block">Get Coordinate</button>
+            <div id="newCheckIn-markdown1" style="color:#000000;">
+                <p ng-show="$storage.lat">
+                    <strong>Coordinate:</strong>
+                    <p>Latitude: {{ $storage.lat }}</p> 
+                    <p>Longitude: {{ $storage.long }}</p>
+                    <p>Adderss: {{ $storage.address }}</p>
+                </p>
+            </div>
+            <div id="newCheckIn-button-bar1" class="button-bar">
+                <a ui-sref="checkIn" id="newCheckIn-button5" class="button button-assertive  button-block">Cancel</a>
+                <a ng-click="save()" id="newCheckIn-button6" class="button button-balanced  button-block">Save</a>
+            </div>
+        </form>
+    </ion-content>
+</ion-view>

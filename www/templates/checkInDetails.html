@@ -1,0 +1,28 @@
+<ion-view title="Check In Details" id="page3">
+    <ion-content padding="true" class="has-header">
+        <div class="list card" id="checkInDetails-card21">
+            <div class="item item-body" id="checkInDetails-list-item-container1">
+                 <h1>{{ checkin.name }}</h1>
+                 <hr>
+                <div id="checkInDetails-null">
+                   <h2>Description</h2>
+                   <p>{{ checkin.description }}</p>
+                   <h2>Review</h2>
+                   <p>{{ checkin.review }}</p>
+                </div>
+                <hr>
+                <p ng-show="check.coordinate">
+                    <h2>Address</h2>
+                    <p>{{ checkin.coordinate.address }}</p>
+                    <h2>Coordinate:</h2>
+                    <p>Latitude: {{ checkin.coordinate.latitude }}</p> 
+                    <p>Longitude: {{ checkin.coordinate.longitude }}</p>
+                </p>
+                <div id="checkInDetails-button-bar2" class="button-bar">
+                    <a ui-sref="checkIn" id="checkInDetails-button7" class="button button-assertive  button-block">Delete</a>
+                    <a ui-sref="editCheckIn" id="checkInDetails-button8" class="button button-positive  button-block">Edit</a>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

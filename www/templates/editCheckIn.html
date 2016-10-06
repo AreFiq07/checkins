@@ -1,0 +1,29 @@
+<ion-view title="Edit Check In" id="page4">
+    <ion-content padding="true" class="has-header">
+        <form id="editCheckIn-form2" class="list">
+            <label class="item item-input" id="editCheckIn-input2" name="name">
+                <span class="input-label">Name</span>
+                <input type="text" placeholder="">
+            </label>
+            <label class="item item-input" id="editCheckIn-textarea3" name="description">
+                <span class="input-label">Description</span><textarea placeholder=""></textarea>
+            </label>
+            <label class="item item-input" id="editCheckIn-textarea4" name="review">
+                <span class="input-label">Review</span><textarea placeholder=""></textarea>
+            </label>
+            <ion-item class="range range-positive" id="editCheckIn-range2">Rating
+                <input type="range" value="50" min="1" max="5" step="1">
+            </ion-item>
+            <button id="editCheckIn-button10" class="button button-positive  button-block">Get Coordinate</button>
+            <div id="editCheckIn-markdown3" style="color:#000000;">
+                <p>
+                    <strong>Coordinate:</strong>
+                </p>
+            </div>
+            <div id="editCheckIn-button-bar3" class="button-bar">
+                <a ui-sref="checkIn" id="editCheckIn-button11" class="button button-assertive  button-block">Cancel</a>
+                <a ui-sref="checkIn" id="editCheckIn-button12" class="button button-balanced  button-block">Save</a>
+            </div>
+        </form>
+    </ion-content>
+</ion-view>
